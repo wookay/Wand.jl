@@ -6,13 +6,13 @@ os:
 
 julia:
   - release
-  - nightly
+#  - nightly
 
 notifications:
   email: false
 
 install:
-  - pip install Wand
+  - sudo pip install Wand
 
 script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
