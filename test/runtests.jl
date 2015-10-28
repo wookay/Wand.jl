@@ -1,5 +1,8 @@
 using Wand
 using Base.Test
 
-# write your own tests here
-@test 1 == 1
+using PyCall
+@pyimport wand.color as color
+Color = color.Color
+
+@test Color("white") == Color("#ffffff")
